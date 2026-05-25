@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- start  bootstrap link -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- end  bootstrap link -->
+
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Brand Home</title>
+</head>
+
+<body>
+
+    <nav class="sidebar h-100 position-fixed bg-white top-0 p-4">
+        <div class="orders-holder overflow-auto h-75">
+            <div class="sidebar-head gap-3 d-flex justify-content-between mb-5 mr-3">
+                <a class="x-sign text-muted">&#10005;</a>
+                <h4>Shopping Cart</h4>
+            </div>
+            <div class="cart-container">
+
+            </div>
+        </div>
+        <div class="payment-section flex-column ">
+            <hr>
+            <div class=" d-flex justify-content-between">
+                <span class="TotalPrice"></span>
+                <p class="text-muted">Total Products</p>
+            </div>
+            <a class="btn btn-info d-block  rounded-pill" href="ProductsOrdered.html">Complete the order</a>
+            <p class="text-muted">Or <a class="text-dark back-shop">&nbsp; Contain Shopping &#8594;</a></p>
+        </div>
+    </nav>
+    <!-- start right side bar that appear in the phone -->
+
+    <nav class="sidebar side-right h-100 position-fixed bg-white top-0 p-3">
+        <div class="orders-holder overflow-auto h-75">
+            <div class="sidebar-head gap-3 d-flex justify-content-between mb-5 mr-3">
+                <h4 class="side-right-name"></h4>
+                <a class="x-sign text-muted">&#10005;</a>
+            </div>
+            <ul class="side-right-container mt-3 d-flex flex-column">
+                <li><a href="index.html" class="text-info ">Home Page <i class="fa-solid fa-house"></i></a></li>
+                <li><a href="ProductsOrdered.html" class="text-info ">Payment page <i class="fa-solid fa-credit-card ml-1"></i></a></li>
+                <li><a href="Favorites.html" class="text-info ">Favorites Page <i class="fa-solid fa-heart ml-2"></i></a></li>
+                <li><a class="text-danger LogOut">Log Out<i class="fa-solid fa-arrow-right-from-bracket ml-1"></i> </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- end right side bar that appear in the phone -->
+    <div class="page-content">
+        <nav class="home-navbar">
+            <div class="navbar_container">
+                <div class="navbar">
+                    <h3 class="brand">Shopping Cart</h3>
+                </div>
+                <ul id="link">
+                    <li><a class="btn btn-info" href="login.html">sign in</a></li>
+                    <li><a class="btn btn-info" href="register.html">sign up</a></li>
+                </ul>
+                <ul id="user_info">
+                    <li><a href="index.html" id="user"></a></li>
+                    <li>
+                        <a class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </li>
+                    <li>
+                        <a class="cart position-relative">
+                            <i class="fa-solid fa-cart-shopping fa-lg"></i>
+                            <span class="position-absolute badge bg-danger text-light rounded-circle"></span>
+                        </a>
+                    </li>
+                    <li class="logOut">
+                        <a class="btn btn-outline-danger LogOut">Logout<i
+                                class="fa-solid fa-arrow-right-from-bracket ml-2"></i></a>
+                    </li>
+                    <li class="d-none bars-container">
+                        <a class="text-light bars"><i class="fa-solid fa-bars"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+
+        <!-- start home-elements section -->
+        <div class="search-area w-100 text-center d-none">
+            <input type="button" value="search"
+                class="search-btn text-white text-capitalize bg-info border-0 p-3 rounded-pill">
+            <input type="text" placeholder="search" class="search-input w-75 p-3 rounded-pill mx-2">
+        </div>
+        <section class="home-elements pt-5">
+
+            <div class="container mt-5">
+                <div class="row " id="product-items">
+                </div>
+            </div>
+        </section>
+
+        <!-- making overlay when open side bar  -->
+        <div class="overlay"></div>
+    </div>
+    <!-- end home-elements section -->
+
+    <!-- start  bootstrap script -->
+
+    <script src="js/jquery.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- end  bootstrap script -->
+     
+    <script type="module" src="js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- start  bootstrap link -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- end  bootstrap link -->
+
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Brand Home</title>
+</head>
+
+<body>
+
+    <nav class="sidebar h-100 position-fixed bg-white top-0 p-4">
+        <div class="orders-holder overflow-auto h-75">
+            <div class="sidebar-head gap-3 d-flex justify-content-between mb-5">
+                <a class="x-sign text-muted">&#10005;</a>
+                <h4>Shopping Cart</h4>
+            </div>
+            <div class="cart-container">
+
+            </div>
+        </div>
+        <div class="payment-section flex-column ">
+            <hr>
+            <div class=" d-flex justify-content-between">
+                <span class="TotalPrice"></span>
+                <p class="text-muted">Total Products</p>
+            </div>
+            <p class="text-muted"><a class="text-dark back-shop">&nbsp; Contain Shopping &#8594;</a></p>
+        </div>
+    </nav>
+    <!-- start right side bar that appear in the phone -->
+
+    <nav class="sidebar side-right h-100 position-fixed bg-white top-0 p-3">
+        <div class="orders-holder overflow-auto h-75">
+            <div class="sidebar-head gap-3 d-flex justify-content-between mb-5 mr-3">
+                <h4 class="side-right-name"></h4>
+                <a class="x-sign text-muted">&#10005;</a>
+            </div>
+            <ul class="side-right-container mt-3 d-flex flex-column">
+                <li><a href="index.html" class="text-info ">Home Page <i class="fa-solid fa-house"></i></a></li>
+                <li><a href="ProductsOrdered.html" class="text-info ">Payment page <i class="fa-solid fa-credit-card ml-1"></i></a></li>
+                <li><a href="Favorites.html" class="text-info ">Favorites Page <i class="fa-solid fa-heart ml-2"></i></a></li>
+                <li><a class="text-danger LogOut">Log Out<i class="fa-solid fa-arrow-right-from-bracket ml-1"></i> </a></li>
+            </ul>
+        </div>
+    </nav>
+   <div class="page-content">
+    <nav class="home-navbar">
+            <div class="navbar_container">
+                <div class="navbar">
+                    <h3 class="brand">Payment Page</h3>
+                </div>
+                <ul id="link">
+                    <li><a class="btn btn-info" href="login.html">sign in</a></li>
+                    <li><a class="btn btn-info" href="register.html">sign up</a></li>
+                </ul>
+                <ul id="user_info">
+                    <li><a href="index.html" id="user"></a></li>
+                    <li>
+                        <a class="cart position-relative">
+                            <i class="fa-solid fa-cart-shopping fa-lg"></i>
+                            <span class="position-absolute badge bg-danger text-light rounded-circle "></span>
+                        </a>
+                    </li>
+                    <li class="logOut">
+                        <a class="btn btn-outline-danger">Logout<i
+                                class="fa-solid fa-arrow-right-from-bracket ml-2"></i></a>
+                    </li>
+                    <li class="d-none bars-container">
+                        <a class="text-light bars"><i class="fa-solid fa-bars"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+
+    <!-- start content section  -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-lg-6 p-3 m-auto">
+                <div class="items-container mt-5 pt-5">
+                    <p class="text-left text-capitalize text-info mb-5">summarize of Order</p>
+                    <div class="cart-container">
+
+                    </div>
+                    <hr>
+                    <div class=" d-flex justify-content-between">
+                        <span class="TotalPrice"></span>
+                        <p class="text-muted">Total Products</p>
+                    </div>
+                    <div class=" d-flex justify-content-between">
+                        <span class="Shipping"></span>
+                        <p class="text-muted">Shipping Costs</p>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between">
+                        <span class="PriceWithCost"></span>
+                        <p class="text-muted">Total</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 p-5 m-auto position-relative">
+                <form class="mt-5 d-flex flex-column p-5 payment-form border-info">
+                    <p class="text-muted text-capitalize">please enter your data to accomplish order </p>
+                    <div class="username position-relative">
+                        <i class="fa-regular fa-user position-absolute text-muted"></i>
+                        <input placeholder="Full Name" class="w-100 p-3" type="text">
+                    </div>
+                    <div class="phone position-relative">
+                        <i class="fa-solid fa-phone-volume position-absolute text-muted"></i>
+                        <input placeholder="Phone Number" class="w-100 p-3" type="text">
+                    </div>
+                    <div class=" email position-relative w-100 bg-white">
+                        <i class="fa-regular fa-envelope position-absolute text-muted"></i>
+                        <input placeholder="E-mail" class="w-100 p-3" type="email">
+                    </div>
+
+                    <select name="city" id="city" class="p-3">
+                        <option value="Cairo">Cairo</option>
+                        <option value="Alex">Alex</option>
+                        <option value="Tanta">Tanta</option>
+                        <option value="Aswan">Aswan</option>
+                    </select>
+
+                    <textarea placeholder="Detailed Address" name="paragraph" class="p-3" style="height: 100px;" maxlength="500"
+                        id=""></textarea>
+
+                    <input type="submit" class="btn btn-info d-block rounded-pill text-capitalize p-3"
+                        value="Complete the order">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="overlay"></div>
+   </div>
+
+    <!-- start  bootstrap script -->
+
+    <script src="js/jquery.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- end  bootstrap script -->
+
+    <script type="module" src="js/PaymentSection.js"></script>
+
+</body>
+
+</html>
