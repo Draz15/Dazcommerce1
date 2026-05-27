@@ -120,6 +120,7 @@ nav:not(#sidebar):not(.home-navbar) {
 
 .pages-list {
     list-style: none;
+    display: none;
     height: 48px;
     gap: 4px;
     width: 100%;
