@@ -1,4 +1,4 @@
-import { sidebarProductsTemplate, renderCart, cartEvents, cartCount } from "../modules/cart.js";
+import { sidebarProductsTemplate, renderCart, cartCount } from "../modules/cart.js";
 
 let links = document.getElementById("link");
 let userName = document.querySelector('#user'); // add this at the top
@@ -18,8 +18,6 @@ let sideProducts = JSON.parse(localStorage.getItem("sideProducts")) || []
 if (sideProducts.length > 0) {
 
     renderCart()
-    cartEvents()
-
     function renderPayment() {
         // display products ordered on the sideBar and page body
 

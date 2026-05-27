@@ -379,11 +379,13 @@ nav:not(#sidebar):not(.home-navbar) {
     padding: 20px 24px;
     border-bottom: 1.5px solid var(--clr-lighter);
     background: var(--clr-lightest);
+    gap: 5px;
+    border-radius: 15px;
 }
 
 .sidebar-head h4 {
     font-weight: 700;
-    color: var(--clr-darkest);
+    color: var(--clr-darkest) !important;
     font-size: 18px;
 }
 
@@ -512,6 +514,7 @@ nav:not(#sidebar):not(.home-navbar) {
     gap: 10px;
     height: auto !important;
     background: #fff;
+    border-radius: 15px;
     padding: 16px 20px 20px;
     border-top: 1.5px solid var(--clr-lighter);
 }
@@ -577,12 +580,13 @@ nav:not(#sidebar):not(.home-navbar) {
 .side-right-name {
     font-size: 18px;
     font-weight: 700;
-    color: var(--clr-darkest);
+    color: var(--clr-darkest) !important;
 }
 
 .side-right-container {
     gap: 4px !important;
     padding: 8px 0;
+    list-style: none;
 }
 
 .side-right-container li a {
@@ -593,7 +597,6 @@ nav:not(#sidebar):not(.home-navbar) {
     border-radius: var(--radius-sm);
     font-size: 15px !important;
     font-weight: 500;
-    color: var(--clr-dark) !important;
     transition: var(--transition);
 }
 

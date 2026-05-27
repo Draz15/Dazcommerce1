@@ -107,8 +107,6 @@ window.addToCart = addToCart;
 
 // adding and minus and deleting quantity of item
 
-export function cartEvents() {
-
     content.addEventListener("click", e => {
         let title = e.target.closest(".cart-item").querySelector("p:nth-child(2)").innerHTML;
         let exist = sideProducts.find(item => item.title == title);
@@ -137,7 +135,7 @@ export function cartEvents() {
 
         renderCart()
     })
-}
+
 
 // log_Out from the app and clear all the data saved
 

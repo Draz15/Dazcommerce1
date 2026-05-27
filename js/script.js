@@ -1,10 +1,11 @@
-import { renderCart, cartEvents } from '../modules/cart.js';
+import { renderCart } from '../modules/cart.js';
 import { products, productTemplate } from '../modules/data.js';
 import '../modules/search.js';
 
 let links = document.getElementById("link");
 let user_info = document.getElementById("user_info");
 let userData = document.getElementById("user-data");
+let pages_list = document.querySelector(".pages-list");
 export let product_items = document.getElementById("product-items");
 export let userName = document.querySelector('#user');
 
@@ -15,9 +16,11 @@ export let userName = document.querySelector('#user');
     if (localStorage.getItem("username") && localStorage.getItem("password")) {
         links.style.display = "none";
         user_info.style.display = "flex";
+        pages_list.style.display = "flex";
         userName.innerHTML = localStorage.getItem("username");
         userName.style.fontSize = "22px";
         userName.style.fontWeight = "bold";
+
     }else {
         links.style.display = "flex";
         user_info.style.display = "none";
@@ -64,5 +67,4 @@ export function restoreFavorites() {
 }
 //  start  display content available in sideBar left and right side bar that appear in the phone
 renderCart();
-cartEvents();
 //  end  display content available in sideBar left and  right side bar that appear in the phone

@@ -1,4 +1,4 @@
-import {renderCart, cartEvents } from '../modules/cart.js';
+import {renderCart} from '../modules/cart.js';
 import {productTemplate } from '../modules/data.js';
 import {restoreFavorites} from './script.js';
 import '../modules/search.js';
@@ -28,7 +28,6 @@ restoreFavorites()
 
 //  start  display content available in sideBar left and right side bar that appear in the phone
 renderCart();
-cartEvents();
 //  end  display content available in sideBar left and  right side bar that appear in the phone
 
 const LogOut = document.querySelectorAll(".LogOut");
