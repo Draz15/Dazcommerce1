@@ -14,6 +14,7 @@ a {
 }
 
 /* start nav bar section */
+
 nav:not(#sidebar) {
     background-color: cadetblue;
 }
@@ -25,6 +26,13 @@ nav:not(#sidebar) {
     align-items: end;
     justify-content: space-between;
     height: 70px;
+}
+@media (max-width:500px) {
+    #link a{
+        padding: 3px !important;
+        font-size: 16px !important;
+    }
+    
 }
 
 .brand {
@@ -85,6 +93,7 @@ nav:not(#sidebar) {
 }
 
 @media (max-width:890px) {
+
     .brand {
         font-size: 1.5rem;
     }
@@ -94,7 +103,7 @@ nav:not(#sidebar) {
     }
 
     .search-icon {
-        font-size: 1rem;
+        font-size: .8rem;
     }
 
     .cart {
@@ -117,6 +126,7 @@ nav:not(#sidebar) {
 /* end nav bar section */
 
 /* start home navbar section */
+
 .home-navbar {
     position: fixed;
     width: 100%;
@@ -261,7 +271,8 @@ nav:not(#sidebar) {
 .cart-btns {
     gap: 1rem;
 }
-.no-favo.active{
+
+.no-favo.active {
     display: block !important;
     text-align: center;
     font-size: 2rem;
@@ -321,7 +332,7 @@ nav:not(#sidebar) {
     transition: all .4s ease;
 }
 
-.payment-form input {
+.payment-form input:not(#submit-btn) {
     padding-left: 35px !important;
 }
 
@@ -343,5 +354,21 @@ select:focus,
 .items-container>p,
 .payment-form p {
     font-size: 1.2rem;
+    text-align: center;
+    line-height: 1.5;
     font-weight: 900;
+}
+
+@media (max-width:600px) {
+
+    .items-container>p,
+    .payment-form p {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .payment-form i {
+        font-size: 1rem;
+        top: 30%;
+    }
 }

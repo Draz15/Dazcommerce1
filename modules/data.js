@@ -59,7 +59,7 @@ export let products = [
 
 export function productTemplate(item) {
     return `
-<div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-3 m-auto">
+<div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-3 m-auto m-sm-0">
     <div class="product-item h-100 p-2 m-auto rounded-lg position-relative" style="width: 18rem;">
         <img class="w-75 m-auto d-block bg-light card-img-top"
              src="${item.URL}" alt="">

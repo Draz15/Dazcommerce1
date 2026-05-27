@@ -19,12 +19,12 @@
 <body>
     <nav>
         <div class="navbar">
-            <a href="index.html" class="brand">Shopping Cart</a>
-
+            
             <div class="navbar_container">
+                <a href="index.html" class="brand">Shopping Cart</a>
                 <ul id="link">
-                    <li><a class="btn btn-primary" href="login.html">sign in</a></li>
-                    <li><a class="btn btn-primary" href="register.html">sign up</a></li>
+                    <li><a class="btn btn-info" href="login.html">sign in</a></li>
+                    <li><a class="btn btn-info" href="register.html">sign up</a></li>
                 </ul>
                 <ul id="user_info">
                     <li><a href="#" id="user-data"></a></li>
@@ -34,10 +34,10 @@
     </nav>
     <section class="section_form">
         <h3>Register page</h3>
-        <form method="post" >
-            <input name="username" placeholder="UserName" type="text" id="user">
+        <form method="post">
+            <input name="username" placeholder="UserName" type="text" id="userName" >
+            <input name="password" placeholder="Password" type="password" id="pass" autocomplete="new-password">
             <input name="email" placeholder="Email" type="email" id="email">
-            <input name="password" placeholder="Password" type="password" id="pass">
             <input type="submit" value="Sign Up" id="btn">
         </form>
     </section>

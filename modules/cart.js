@@ -16,7 +16,7 @@ export let bars = document.querySelector(".bars");
 export let side_right = document.querySelector(".side-right");
 export let side_right_name = document.querySelector(".side-right-name");
 
-bars.onclick = ()=> side_right.classList.toggle("active")
+bars.onclick = () => side_right.classList.toggle("active")
 side_right_name.innerHTML = localStorage.getItem("username")
 
 // end right side bar section
@@ -34,8 +34,8 @@ function closeSidebar() {
 }
 
 X_sign.forEach(item => item.onclick = closeSidebar);
-back_shop?.addEventListener("click", () =>{ 
-    if(location.pathname == "/ProductsOrdered.html") location = "index.html"
+back_shop?.addEventListener("click", () => {
+    if (location.pathname == "/ProductsOrdered.html") location = "index.html"
     else closeSidebar()
 });
 overlay?.addEventListener("click", closeSidebar);
@@ -66,19 +66,18 @@ export function renderCart() {
     content.innerHTML = sideProducts.map(sidebarProductsTemplate).join("")
 
     if (sideProducts.length > 0) {
-        
+
         cartCount.style.display = "block"
         payment.style.display = "flex";
         cartCount.innerHTML = sideProducts.length;
 
         let TotalPrice = document.querySelector(".TotalPrice")
-        TotalPrice.innerHTML = sideProducts.reduce((accumulator, curr) => accumulator + curr.price * curr.quantity, 0)  + " EGP"
+        TotalPrice.innerHTML = sideProducts.reduce((accumulator, curr) => accumulator + curr.price * curr.quantity, 0) + " EGP"
     }
     else {
         cartCount.style.display = "none"
         payment.style.display = "none";
     };
-
 }
 
 export function addToCart(price, title, URL) {
@@ -138,7 +137,15 @@ export function cartEvents() {
 
         renderCart()
     })
-
-    //  start right side bar that appear in the phone
-
 }
+
+// log_Out from the app and clear all the data saved
+
+document.addEventListener("DOMContentLoaded", () => {
+    const LogOut = document.querySelectorAll(".LogOut");
+    LogOut.forEach(item => item.onclick = () => {
+        localStorage.clear();
+        sessionStorage.clear()
+        location.href = "login.html"
+    })
+}) 

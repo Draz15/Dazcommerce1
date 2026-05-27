@@ -1,5 +1,6 @@
 import {renderCart, cartEvents } from '../modules/cart.js';
 import {productTemplate } from '../modules/data.js';
+import {restoreFavorites} from './script.js';
 import '../modules/search.js';
 
 let links = document.getElementById("link");
@@ -23,6 +24,7 @@ if(FavoriteProducts.length > 0){
     if(location.pathname.includes("Favorites")){product_items.innerHTML = "there are no Favorites yet !!!"
     row_style.classList.add("active")}
 }
+restoreFavorites()
 
 //  start  display content available in sideBar left and right side bar that appear in the phone
 renderCart();

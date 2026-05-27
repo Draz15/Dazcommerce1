@@ -1,41 +1,39 @@
-let username = document.getElementById("user");
+let username = document.getElementById("userName");
 let password = document.getElementById("pass");
 let subBtn = document.getElementById("btn");
 // end values section
 
-// ======================================
-// save data in form of session 
-// ======================================
+//  ==============================
+// make tha username full and pass empty 
+//  ==============================
 
-if (sessionStorage.getItem("username")) {
-    username.value = sessionStorage.getItem("username");
-    password.value = sessionStorage.getItem("password");
-} else {
-    username.value = ""
+window.onload = () => {
+    username.value =  sessionStorage.getItem("userdata") || ""
     password.value = ""
 }
 
-username.oninput = savedata;
-password.oninput = savedata;
+const getUsername = localStorage.getItem('username') || "";
+const getPassword = localStorage.getItem('password') || "";
 
-function savedata() {
-    sessionStorage.setItem("username", username.value)
-    sessionStorage.setItem("password", password.value)
-}
+// ========================================
+// check the validity of data on submit
+// ========================================
 
-//  ==============================
-// check input values data 
-//  ==============================
-const getUsername = localStorage.getItem('username') ;
-const getPassword = localStorage.getItem('password') ;
-subBtn.addEventListener("click", (e) =>{
+subBtn.addEventListener("click", (e) => {
     e.preventDefault()
-    if(username.value !== getUsername.trim()  || password.value.trim() !== getPassword.trim()){
-     alert("Pls Enter the right Data")
-    }else{
+
+    if (!getUsername || !getPassword) {
+        alert("No account found, please register first")
+        location.href = "register.html"
+        return
+    }
+
+    if (username.value !== getUsername.trim() || password.value.trim() !== getPassword.trim()) {
+        alert("Pls Enter the right Data")
+    } else {
         setTimeout(() => {
+            sessionStorage.clear()
             location = "index.html"
-            
         }, 500);
 
     }
